@@ -1,1 +1,15 @@
+<h1>Make your form here</h1>
+<form method="post" action="/checkout">
 
+  <% if @session.has_key?([:item]) %>
+    <div>
+      <%= @session[:item] %>
+    </div>
+  <% end %>
+  <div>
+    <label for="item"> Item : </label>
+    <input type="text" id="item" name="item">
+  </div>
+
+  <input type="submit" value="submit">
+</form>
